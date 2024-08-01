@@ -22,10 +22,7 @@ else:
         st.session_state.attempts = 0
     
     # Select Challenger or Tester
-    check1 = st.checkbox("Tester")
-    check2 = st.checkbox("Challenger")
-
-    if check1:
+    if st.checkbox("Tester"):
         st.write("You are a Tester!")
             
         # Create a session state variable to store the chat messages. This ensures that the
@@ -38,7 +35,7 @@ else:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
 
-    elif check2:
+    elif st.checkbox("Challenger"):
         st.write("You are a Challenger!")
             
         # Create a session state variable to store the chat messages. This ensures that the
